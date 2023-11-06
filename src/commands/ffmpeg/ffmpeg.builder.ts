@@ -17,7 +17,9 @@ export class FfmpegBuilder {
   }
 
   output(outputPath: string): string[] {
-    if (!this.inputPath) throw new Error('Input parameter not set')
+    if (!this.inputPath) {
+      throw new Error('Input parameter not set')
+    }
     const args: string[] = ['-i', this.inputPath]
     this.options.forEach((value, key) => {
       args.push(key)
@@ -27,5 +29,3 @@ export class FfmpegBuilder {
     return args
   }
 }
-
-new FfmpegBuilder().input('').setVideoSize(1920, 1080).output('//')

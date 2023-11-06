@@ -1,5 +1,5 @@
+import { ChildProcessWithoutNullStreams } from 'child_process'
 import { IStreamLogger } from '../handlers/stream-logger.interface'
-import { ChildProcessWithoutNullStreams, spawn } from 'child_process'
 import { ICommandExec } from './command.types'
 
 export abstract class CommandExecutor<Input> {

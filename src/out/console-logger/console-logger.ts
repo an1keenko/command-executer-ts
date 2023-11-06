@@ -8,14 +8,13 @@ export class ConsoleLogger implements IStreamLogger {
     }
     return ConsoleLogger.logger
   }
+
   log(...args: any[]): void {
     console.log(...args)
   }
-
   error(...args: any[]): void {
     console.log(...args)
   }
-
   end(): void {
     console.log('Successfully done')
   }
